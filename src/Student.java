@@ -46,8 +46,8 @@ public class Student
     }
 
     public int totalEnrolledCourses(){
-        //TODO implement
-        return 0;
+    	int total = enrolledCourses.size();
+        return total;
     }
 
     public List<Course> getEnrolledCourses()
