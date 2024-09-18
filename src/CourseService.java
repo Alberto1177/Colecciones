@@ -24,24 +24,27 @@ public class CourseService
     }
 
     public void enrollStudent(String studentId, String courseId){
-        //TODO implement so it adds the given course form the student
-    	
-    }
+       Student student = students.get(studentId);
+       Course course = courses.get(courseId);
+       student.enroll(course);
+    }//Asignar el curso al estudiante
 
     public void unEnrollStudent(String studentId, String courseId){
-        //TODO implement so it removes the given course form the student
+    	Student student = students.get(studentId);
+        Course course = courses.get(courseId);
+        student.unEnroll(course);
     	
-    }
+    }//Eliminar el curso al estudiante
 
     public void displayCourseInformation(String courseId){
-        //TODO implement so it shows the course name, id and credits
+        System.out.println(courses.get(courseId).toString());
     	
-    }
+    }//Muestra la informacion del curso
 
     public void displayStudentInformation(String studentId){
-        //TODO implement so it shows the student name, id and list of enrolled courses
+    	 System.out.println(students.get(studentId).toString());
     	
-    }
+    }//Muestra la informacion del estudiante
 
 
 }
